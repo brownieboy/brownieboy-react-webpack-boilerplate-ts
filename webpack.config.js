@@ -4,7 +4,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   name: "React-18_Boiler-Plate",
   mode: "development",
-  entry: "./src/index.jsx",
+  entry: "./src/index.tsx",
   output: {
     filename: "bundle.[chunkhash].js",
     path: path.resolve("dist"),
@@ -17,6 +17,7 @@ module.exports = {
         exclude: /node_modules/,
         use: "babel-loader",
       },
+      { test: /\.tsx?$/, loader: "ts-loader" },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
@@ -39,18 +40,18 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx"],
-   /* fallback: {
-      // assert: require.resolve('assert'),
-      // "url": require.resolve("url/"),
-      crypto: require.resolve("crypto-browserify"),
-      http: require.resolve('stream-http'),
-      https: require.resolve("https-browserify"),
-      // os: require.resolve('os-browserify/browser'),
-      stream: require.resolve('stream-browserify'),
-      buffer: require.resolve("buffer/"),
-      // "zlib": require.resolve("browserify-zlib")
-    }, */
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
+    /* fallback: {
+       // assert: require.resolve('assert'),
+       // "url": require.resolve("url/"),
+       crypto: require.resolve("crypto-browserify"),
+       http: require.resolve('stream-http'),
+       https: require.resolve("https-browserify"),
+       // os: require.resolve('os-browserify/browser'),
+       stream: require.resolve('stream-browserify'),
+       buffer: require.resolve("buffer/"),
+       // "zlib": require.resolve("browserify-zlib")
+     }, */
   },
   plugins: [
     new HTMLWebpackPlugin({
