@@ -2,24 +2,25 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
-  extends: ["plugin:react/recommended"],
+  extends: ["plugin:react/recommended", "plugin:storybook/recommended"],
   overrides: [],
   parser: "@typescript-eslint/parser",
   settings: {
     react: {
-      version: "detect",
-    },
+      version: "detect"
+    }
   },
   parserOptions: {
     ecmaVersion: "latest",
-    sourceType: "module",
+    sourceType: "module"
     // parser: "@babel/eslint-parser",
     // "babelOptions": {
     //   "presets": ["@babel/preset-react"]
     // },
   },
+
   plugins: ["@typescript-eslint", "react"],
   rules: {
     indent: ["warn", 2],
@@ -27,6 +28,6 @@ module.exports = {
     "no-unused-vars": ["warn"],
     "react/prop-types": ["warn"],
     quotes: ["error", "double"],
-    semi: ["error", "always"],
-  },
+    semi: ["error", "always"]
+  }
 };
