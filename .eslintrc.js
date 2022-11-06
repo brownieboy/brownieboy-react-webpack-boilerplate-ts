@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ["plugin:react/recommended", "standard", "plugin:react/jsx-runtime"],
+  extends: ["plugin:react/recommended", "plugin:react/jsx-runtime"],
   overrides: [],
   parser: "@typescript-eslint/parser",
   settings: {
@@ -20,7 +20,7 @@ module.exports = {
     //   "presets": ["@babel/preset-react"]
     // },
   },
-  plugins: ["@typescript-eslint","react"],
+  plugins: ["@typescript-eslint", "react"],
   rules: {
     indent: ["warn", 2],
     "linebreak-style": ["warn", "unix"],
